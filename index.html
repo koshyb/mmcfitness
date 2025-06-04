@@ -25,7 +25,7 @@
     <ul>
       <li>💪 Fully Equipped Gym</li>
       <li>🏋️ Personal Training</li>
-      <li>🤸‍♀️ Group Classes (HIIT, Yoga, Zumba)</li>
+      <li>🤸‍♀️ Group Classes (HIIT, Yoga)</li>
       <li>🥗 Nutrition Coaching</li>
     </ul>
   </section>
@@ -37,7 +37,20 @@
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@mmcfitness.com">info@mmcfitness.com</a></p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="_replyto" required /><br />
+
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="5" required></textarea><br />
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <p>Email: <a href="mailto:info@mmcfitness.com">train@mmcfitness.com</a></p>
     <p>Phone: 01234 567890</p>
     <p>Address: 123 MMC Street, London, UK</p>
   </section>
