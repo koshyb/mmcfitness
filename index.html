@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MMC Fitness</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
+
+  <header class="hero" id="home">
     <div class="overlay">
       <h1>MMC Fitness</h1>
       <p>Train Hard. Stay Strong. Live Better.</p>
@@ -17,16 +20,17 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <p>Welcome to MMC Fitness – your community-driven gym where strength meets support. Whether you're new to fitness or a seasoned athlete, we’ve got what you need.</p>
+    <p>MMC Fitness is your ultimate strength & conditioning destination. Whether you're building muscle, dropping fat, or finding balance — we're here to elevate your journey.</p>
   </section>
 
   <section id="services">
-    <h2>Our Services</h2>
+    <h2>What We Offer</h2>
     <ul>
-      <li>💪 Fully Equipped Gym</li>
-      <li>🏋️ Personal Training</li>
-      <li>🤸‍♀️ Group Classes (HIIT, Yoga)</li>
-      <li>🥗 Nutrition Coaching</li>
+      <li>🏋️‍♂️ State-of-the-art Gym Equipment</li>
+      <li>💥 HIIT, Functional & Strength Classes</li>
+      <li>🧘‍♀️ Yoga & Recovery Sessions</li>
+      <li>🥗 Personalized Nutrition Coaching</li>
+      <li>👊 One-on-One Personal Training</li>
     </ul>
   </section>
 
@@ -38,25 +42,20 @@
   <section id="contact">
     <h2>Contact Us</h2>
     <form action="https://formspree.io/f/mgvyvayz" method="POST">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required /><br />
-
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="_replyto" required /><br />
-
-      <label for="message">Message:</label><br />
-      <textarea id="message" name="message" rows="5" required></textarea><br />
-
-      <button type="submit" class="btn">Send Message</button>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
 
-    <p>Email: <a href="mailto:info@mmcfitness.com">train@mmcfitness.com</a></p>
+    <p>Email: <a href="mailto:train@mmcfitness.com">train@mmcfitness.com</a></p>
     <p>Phone: 01234 567890</p>
-    <p>Address: 123 MMC Street, London, UK</p>
+    <p>Location: 123 MMC Street, London, UK</p>
   </section>
 
   <footer>
     <p>&copy; 2025 MMC Fitness. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
