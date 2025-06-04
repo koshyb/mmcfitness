@@ -7,20 +7,33 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
+
+  <!-- Sticky Nav -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <span class="logo">MMC Fitness</span>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#schedule">Hours</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Parallax -->
+  <header class="hero" id="home">
     <div class="overlay">
-      <h1>MMC Fitness</h1>
-      <p>Train Hard. Stay Strong. Live Better.</p>
+      <h1>Train Hard. Stay Strong.</h1>
+      <p>Achieve your best with MMC Fitness</p>
       <a href="#contact" class="btn">Join Now</a>
     </div>
   </header>
 
-  <section id="about">
+  <section id="about" class="section parallax-about">
     <h2>About Us</h2>
     <p>Welcome to MMC Fitness – your community-driven gym where strength meets support. Whether you're new to fitness or a seasoned athlete, we’ve got what you need.</p>
   </section>
 
-  <section id="services">
+  <section id="services" class="section">
     <h2>Our Services</h2>
     <ul>
       <li>💪 Fully Equipped Gym</li>
@@ -30,33 +43,9 @@
     </ul>
   </section>
 
-  <section id="schedule">
+  <section id="schedule" class="section parallax-schedule">
     <h2>Opening Hours</h2>
     <p>Mon – Fri: 6 AM – 10 PM<br>Sat – Sun: 8 AM – 8 PM</p>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/mgvyvayz" method="POST">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required /><br />
-
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="_replyto" required /><br />
-
-      <label for="message">Message:</label><br />
-      <textarea id="message" name="message" rows="5" required></textarea><br />
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-
-    <p>Email: <a href="mailto:info@mmcfitness.com">train@mmcfitness.com</a></p>
-    <p>Phone: 01234 567890</p>
-    <p>Address: 123 MMC Street, London, UK</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 MMC Fitness. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+  <section id="contact" class="section">
