@@ -6,7 +6,7 @@
   <title>MMC Fitness</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -39,7 +39,7 @@
     <p>MMC Fitness is your ultimate strength & conditioning destination. Whether you're building muscle, dropping fat, or finding balance — we're here to elevate your journey.</p>
   </section>
 
-  <section id="services" data-aos="fade-right">
+  <section id="services" data-aos="fade-left">
     <h2>What We Offer</h2>
     <ul>
       <li>🏋️‍♂️ State-of-the-art Gym Equipment</li>
@@ -50,7 +50,7 @@
     </ul>
   </section>
 
-  <section id="schedule" data-aos="fade-left">
+  <section id="schedule" data-aos="fade-right">
     <h2>Opening Hours</h2>
     <p>Mon – Fri: 6 AM – 10 PM<br>Sat – Sun: 8 AM – 8 PM</p>
   </section>
@@ -87,7 +87,10 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true, duration: 1000 });
+    AOS.init({
+      once: true,
+      duration: 1000
+    });
   </script>
   
 </body>
