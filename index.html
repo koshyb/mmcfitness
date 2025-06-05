@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MMC Fitness</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="media/favicon.ico" type="image/x-icon" />
-  <meta name="description" content="MMC Fitness – premium training facility with expert coaching, cutting-edge equipment, and a vibrant community in Haverhill." />
-  <meta name="keywords" content="fitness, gym, Haverhill, training, HIIT, yoga, personal trainer" />
-  <meta name="author" content="MMC Fitness" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
-    <ul>
+    <div class="logo">MMC FITNESS</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#services">Offerings</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#hours">Hours</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><button id="theme-toggle">🌓</button></li>
     </ul>
   </nav>
 
+  <!-- Hero -->
   <header class="hero">
-    <video autoplay muted loop playsinline poster="media/fallback.jpg">
+    <video autoplay muted loop playsinline>
       <source src="media/video.mp4" type="video/mp4" />
     </video>
     <div class="overlay">
@@ -36,12 +34,13 @@
     <a href="#contact" class="floating-btn">Join Now</a>
   </header>
 
+  <!-- Content Sections -->
   <section id="about" data-aos="fade-up">
     <h2>About</h2>
     <p>Welcome to MMC Fitness – a premium fitness studio focused on transformation and performance. Elite gear, expert coaches, and a community that thrives.</p>
   </section>
 
-  <section id="services" data-aos="fade-up" data-aos-delay="200">
+  <section id="services" data-aos="fade-up">
     <h2>Our Offerings</h2>
     <ul>
       <li>🔸 State-of-the-art gym equipment</li>
@@ -51,15 +50,9 @@
     </ul>
   </section>
 
-  <section id="hours" data-aos="fade-up" data-aos-delay="300">
+  <section id="hours" data-aos="fade-up">
     <h2>Hours</h2>
     <p>Mon–Fri: 6 AM – 10 PM<br/>Sat–Sun: 8 AM – 8 PM</p>
-  </section>
-
-  <section id="testimonials" data-aos="fade-up" data-aos-delay="400">
-    <h2>What Members Say</h2>
-    <blockquote>“Transformed my life! Best gym in town.” – Alex T.</blockquote>
-    <blockquote>“Great coaches and community vibe.” – Priya M.</blockquote>
   </section>
 
   <section id="contact" data-aos="zoom-in">
@@ -78,23 +71,16 @@
     </div>
   </section>
 
-  <div class="socials" data-aos="fade-up">
-    <a href="https://instagram.com/mmcfitness" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://facebook.com/mmcfitness" target="_blank"><i class="fab fa-facebook"></i></a>
-  </div>
-
   <footer>
     <p>&copy; 2025 MMC Fitness. All rights reserved.</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ once: true, duration: 1000 });
 
-    const toggle = document.getElementById("theme-toggle");
-    toggle.addEventListener("click", () => {
-      const root = document.documentElement;
-      root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      document.getElementById("nav-links").classList.toggle("active");
     });
   </script>
 </body>
