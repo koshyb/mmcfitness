@@ -1,33 +1,78 @@
-/* Reset & Base */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  background-color: #111;
-  color: #eee;
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #f04e30;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #eee;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f04e30;
+}
+
+
 h1, h2 {
   font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-align: center;
+  margin-bottom: 1rem;
   color: #f04e30;
-  font-size: 2.5rem;
 }
 
 section {
-  padding: 4rem 1rem;
-  max-width: 1000px;
+  padding: 4rem 2rem;
+  max-width: 900px;
   margin: auto;
+  text-align: center;
 }
 
-/* Hero Video */
+/* Hero Section with Parallax */
 .hero-video {
   position: relative;
   height: 100vh;
@@ -52,82 +97,106 @@ section {
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 3rem;
+  border-radius: 12px;
+  animation: fadeInUp 1.2s ease-in-out;
 }
 
-/* Buttons */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.overlay h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
 .btn {
   display: inline-block;
+  margin-top: 1.5rem;
   background-color: #f04e30;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 2rem;
   border-radius: 30px;
   text-decoration: none;
-  transition: background 0.3s ease;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #c03e25;
+  background-color: #c0392b;
 }
 
-/* List Style */
+/* Services list */
 ul {
   list-style: none;
   padding: 0;
-  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
 ul li {
-  margin: 0.75rem 0;
-  font-size: 1.1rem;
+  margin: 1rem 0;
 }
 
-/* Slanted section divider */
-section::before {
-  content: '';
-  display: block;
-  height: 60px;
-  background: linear-gradient(to bottom right, #f04e30, transparent);
-  margin-bottom: -60px;
-}
-
-/* Form */
+/* Form styling */
 form {
-  max-width: 600px;
-  margin: auto;
+  max-width: 500px;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #f04e3088;
 }
 
 input, textarea {
-  padding: 0.75rem;
+  padding: 0.8rem;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
+  background: #333;
+  color: white;
 }
 
-/* Map Container */
-.map-container {
-  margin-top: 2rem;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(240, 78, 48, 0.4);
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+}
+
+button[type="submit"] {
+  background-color: #f04e30;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background-color: #c0392b;
 }
 
 /* Footer */
 footer {
+  background: #000;
   text-align: center;
-  background-color: #1a1a1a;
+  padding: 2rem 1rem;
   color: #aaa;
-  padding: 1rem;
   font-size: 0.9rem;
-}
-
-/* Motion Enhancements */
-[data-aos] {
-  transition: all 0.5s ease;
 }
