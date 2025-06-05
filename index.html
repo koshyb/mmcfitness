@@ -2,82 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MMC Fitness</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#home" class="logo">MMC Fitness</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#schedule">Hours</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <header class="hero-video">
-    <video autoplay muted loop playsinline id="bg-video">
-      <source src="https://cdn.coverr.co/videos/coverr-working-out-in-a-gym-6920/1080p.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+  <header class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="media/video.mp4" type="video/mp4" />
     </video>
     <div class="overlay">
-      <h1>MMC Fitness</h1>
-      <p>Train Hard. Stay Strong. Live Better.</p>
-      <a href="#contact" class="btn">Join Now</a>
+      <h1>MMC FITNESS</h1>
+      <p>Unleash Your Potential</p>
     </div>
+    <a href="#contact" class="floating-btn">Join Now</a>
   </header>
 
   <section id="about" data-aos="fade-up">
-    <h2>About Us</h2>
-    <p>MMC Fitness is your ultimate strength & conditioning destination. Whether you're building muscle, dropping fat, or finding balance — we're here to elevate your journey.</p>
+    <h2>About</h2>
+    <p>Welcome to MMC Fitness – a premium fitness studio focused on transformation and performance. Elite gear, expert coaches, and a community that thrives.</p>
   </section>
 
-  <section id="services" data-aos="fade-right">
-    <h2>What We Offer</h2>
+  <section id="services" data-aos="fade-up">
+    <h2>Our Offerings</h2>
     <ul>
-      <li>🏋️‍♂️ State-of-the-art Gym Equipment</li>
-      <li>💥 HIIT, Functional & Strength Classes</li>
-      <li>🧘‍♀️ Yoga & Recovery Sessions</li>
-      <li>🥗 Personalized Nutrition Coaching</li>
-      <li>👊 One-on-One Personal Training</li>
+      <li>🔸 State-of-the-art gym equipment</li>
+      <li>🔸 Personal & Small Group Training</li>
+      <li>🔸 HIIT, Spin, and Yoga Classes</li>
+      <li>🔸 Nutrition & Body Composition Coaching</li>
     </ul>
   </section>
 
-  <section id="schedule" data-aos="fade-left">
-    <h2>Opening Hours</h2>
-    <p>Mon – Fri: 6 AM – 10 PM<br>Sat – Sun: 8 AM – 8 PM</p>
+  <section id="hours" data-aos="fade-up">
+    <h2>Hours</h2>
+    <p>Mon–Fri: 6 AM – 10 PM<br/>Sat–Sun: 8 AM – 8 PM</p>
   </section>
 
   <section id="contact" data-aos="zoom-in">
-    <h2>Contact Us</h2>
+    <h2>Contact</h2>
     <form action="https://formspree.io/f/mgvyvayz" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <input type="email" name="_replyto" placeholder="Email Address" required />
+      <textarea name="message" placeholder="Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
     </form>
-
-    <p>Email: <a href="mailto:train@mmcfitness.com">train@mmcfitness.com</a></p>
-    <p>Phone: 01234 567890</p>
-    <p>Location: Unit 1, 40 High St, Haverhill, CB9 8AR</p>
-    <!-- Google Maps Embed -->
     <div class="map-container">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2412.918432609719!2d0.43863541582627055!3d52.08231317973227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d86f010479f37d%3A0x8e78693872e9147!2s40%20High%20St%2C%20Haverhill%20CB9%208AR!5e0!3m2!1sen!2suk!4v1717488802927!5m2!1sen!2suk"
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.8984810627165!2d0.43938941566380154!3d52.08107087973257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d857f62374a401%3A0x5d4370be6c39403f!2s40%20High%20St%2C%20Haverhill%20CB9%208AR!5e0!3m2!1sen!2suk!4v1682790933726!5m2!1sen!2suk"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
-    </div>
-    <div style="text-align: center; margin-top: 1rem;">
-      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Unit+1,+40+High+St,+Haverhill,+CB9+8AR" target="_blank">
-        🧭 Get Directions
-      </a>
     </div>
   </section>
 
@@ -86,9 +62,6 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 1000 });
-  </script>
-  
+  <script>AOS.init({ once: true, duration: 1000 });</script>
 </body>
 </html>
