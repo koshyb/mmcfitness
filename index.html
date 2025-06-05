@@ -4,56 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MMC Fitness</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-  <header class="hero">
-    <video autoplay muted loop playsinline>
-      <source src="media/video.mp4" type="video/mp4" />
-    </video>
+  <header class="section video-section" data-video="media/hero.mp4">
     <div class="overlay">
-      <h1>MMC FITNESS</h1>
-      <p>Unleash Your Potential</p>
+      <h1>MMC Fitness</h1>
+      <p>Train Hard. Stay Strong. Live Better.</p>
+      <a href="#contact" class="btn">Join Now</a>
     </div>
-    <a href="#contact" class="floating-btn">Join Now</a>
   </header>
 
-  <section id="about" data-aos="fade-up">
-    <h2>About</h2>
-    <p>Welcome to MMC Fitness – a premium fitness studio focused on transformation and performance. Elite gear, expert coaches, and a community that thrives.</p>
+  <section id="about" class="section video-section" data-video="media/about.mp4">
+    <div class="overlay">
+      <h2>About Us</h2>
+      <p>Welcome to MMC Fitness – your community-driven gym where strength meets support. Whether you're new to fitness or a seasoned athlete, we’ve got what you need.</p>
+    </div>
   </section>
 
-  <section id="services" data-aos="fade-up">
-    <h2>Our Offerings</h2>
-    <ul>
-      <li>🔸 State-of-the-art gym equipment</li>
-      <li>🔸 Personal & Small Group Training</li>
-      <li>🔸 HIIT, Spin, and Yoga Classes</li>
-      <li>🔸 Nutrition & Body Composition Coaching</li>
-    </ul>
+  <section id="services" class="section video-section" data-video="media/services.mp4">
+    <div class="overlay">
+      <h2>Our Services</h2>
+      <ul>
+        <li>💪 Fully Equipped Gym</li>
+        <li>🏋️ Personal Training</li>
+        <li>🤸‍♀️ Group Classes (HIIT, Yoga)</li>
+        <li>🥗 Nutrition Coaching</li>
+      </ul>
+    </div>
   </section>
 
-  <section id="hours" data-aos="fade-up">
-    <h2>Hours</h2>
-    <p>Mon–Fri: 6 AM – 10 PM<br/>Sat–Sun: 8 AM – 8 PM</p>
-  </section>
-
-  <section id="contact" data-aos="zoom-in">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/mgvyvayz" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Email Address" required />
-      <textarea name="message" placeholder="Message" rows="5" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.8984810627165!2d0.43938941566380154!3d52.08107087973257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d857f62374a401%3A0x5d4370be6c39403f!2s40%20High%20St%2C%20Haverhill%20CB9%208AR!5e0!3m2!1sen!2suk!4v1682790933726!5m2!1sen!2suk"
-        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+  <section id="contact" class="section video-section" data-video="media/contact.mp4">
+    <div class="overlay">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/mgvyvayz" method="POST">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="_replyto" placeholder="Email" required />
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <p>Email: <a href="mailto:train@mmcfitness.com">train@mmcfitness.com</a></p>
+      <p>Phone: 01234 567890</p>
+      <p><a href="https://www.google.com/maps/dir/?api=1&destination=Unit+1,+40+High+St,+Haverhill,+CB9+8AR" target="_blank">📍 Get Directions</a></p>
     </div>
   </section>
 
@@ -61,7 +53,18 @@
     <p>&copy; 2025 MMC Fitness. All rights reserved.</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ once: true, duration: 1000 });</script>
+  <script>
+    document.querySelectorAll('.video-section').forEach(section => {
+      const videoSrc = section.getAttribute('data-video');
+      const video = document.createElement('video');
+      video.src = videoSrc;
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+      video.className = 'bg-video';
+      section.prepend(video);
+    });
+  </script>
 </body>
 </html>
