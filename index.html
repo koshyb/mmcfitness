@@ -7,63 +7,68 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header class="section video-section" data-video="media/hero.mp4">
+  <!-- Hero Section -->
+  <section class="section video-section" data-video="media/hero.mp4">
     <div class="overlay">
       <h1>MMC Fitness</h1>
       <p>Train Hard. Stay Strong. Live Better.</p>
       <a href="#contact" class="btn">Join Now</a>
     </div>
-  </header>
+  </section>
 
+  <!-- About Section -->
   <section id="about" class="section video-section" data-video="media/about.mp4">
     <div class="overlay">
       <h2>About Us</h2>
-      <p>Welcome to MMC Fitness – your community-driven gym where strength meets support. Whether you're new to fitness or a seasoned athlete, we’ve got what you need.</p>
+      <p>Welcome to MMC Fitness – your community-driven gym where strength meets support.</p>
     </div>
   </section>
 
+  <!-- Services Section -->
   <section id="services" class="section video-section" data-video="media/services.mp4">
     <div class="overlay">
       <h2>Our Services</h2>
       <ul>
         <li>💪 Fully Equipped Gym</li>
         <li>🏋️ Personal Training</li>
-        <li>🤸‍♀️ Group Classes (HIIT, Yoga)</li>
+        <li>🤸‍♀️ Group Classes</li>
         <li>🥗 Nutrition Coaching</li>
       </ul>
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="section video-section" data-video="media/contact.mp4">
     <div class="overlay">
       <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/mgvyvayz" method="POST">
-        <input type="text" name="name" placeholder="Name" required />
-        <input type="email" name="_replyto" placeholder="Email" required />
-        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <form action="https://formspree.io/f/mgvyvayz" method="POST" autocomplete="on">
+        <input type="text" name="name" placeholder="Name" autocomplete="name" required />
+        <input type="email" name="_replyto" placeholder="Email" autocomplete="email" required />
+        <textarea name="message" rows="5" placeholder="Message" autocomplete="message" required></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
-      <p>Email: <a href="mailto:train@mmcfitness.com">train@mmcfitness.com</a></p>
-      <p>Phone: 01234 567890</p>
+      <p><a href="mailto:train@mmcfitness.com">train@mmcfitness.com</a></p>
       <p><a href="https://www.google.com/maps/dir/?api=1&destination=Unit+1,+40+High+St,+Haverhill,+CB9+8AR" target="_blank">📍 Get Directions</a></p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 MMC Fitness. All rights reserved.</p>
+    <p>&copy; 2025 MMC Fitness</p>
   </footer>
 
   <script>
     document.querySelectorAll('.video-section').forEach(section => {
       const videoSrc = section.getAttribute('data-video');
-      const video = document.createElement('video');
-      video.src = videoSrc;
-      video.autoplay = true;
-      video.loop = true;
-      video.muted = true;
-      video.playsInline = true;
-      video.className = 'bg-video';
-      section.prepend(video);
+      if (videoSrc) {
+        const video = document.createElement('video');
+        video.src = videoSrc;
+        video.autoplay = true;
+        video.loop = true;
+        video.muted = true;
+        video.playsInline = true;
+        video.className = 'bg-video';
+        section.prepend(video);
+      }
     });
   </script>
 </body>
