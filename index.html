@@ -1,92 +1,322 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MMC Fitness</title>
-  <link rel="icon" href="media/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
-  <link rel="manifest" href="media/site.webmanifest">
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>MMC Fitness</title>
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+    <link rel="manifest" href="media/site.webmanifest">
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+    <script async
+            src="https://js.stripe.com/v3/buy-button.js">
+    </script>
 </head>
-<body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">MMC FITNESS</div>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#hours">Hours</a></li>
-      <li><a href="#contact">Contact</a></li>
+<body class="bg-gray-50">
+
+<!-- Navbar -->
+<nav class="navbar !p-3 xl:!pl-10 xl:!pr-10" x-data="{ open: false }">
+    <div class="logo">Rep Rack Fitness</div>
+    <div class="menu-toggle" id="menu-toggle" @click="open = !open">&#9776;</div>
+    <ul class="nav-links invisible md:visible" id="nav-links">
+        <li><a class="text-gray-700" href="#about">About</a></li>
+        <li><a class="text-gray-700" href="#services">Services</a></li>
+        <li><a class="text-gray-700" href="#hours">Opening Hours</a></li>
+        <li><a class="text-gray-700" href="#membership">Membership</a></li>
+        <li><a class="text-gray-700" href="#contact">Contact</a></li>
     </ul>
-  </nav>
+    <ul class="nav-links bg-gray-50 items-center" id="nav-links" x-show="open" @click.away="open = false">
+        <li><a class="text-gray-600" @click="open = false" href="#about">About</a></li>
+        <li><a class="text-gray-600" @click="open = false" href="#services">Services</a></li>
+        <li><a class="text-gray-600" @click="open = false" href="#hours">Opening Hours</a></li>
+        <li><a class="text-gray-600" @click="open = false" href="#membership">Membership</a></li>
+        <li><a class="text-gray-600" @click="open = false" href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-  <!-- Hero -->
-  <header class="hero">
+<!-- Hero -->
+<header class="hero">
     <video autoplay muted loop playsinline>
-      <source src="media/video.mp4" type="video/mp4" />
+        <source src="media/video.mp4" type="video/mp4"/>
     </video>
     <div class="overlay">
-      <h1>MMC FITNESS</h1>
-      <p>Unleash Your Potential</p>
+        <h1>Rep Rack Fitness</h1>
+        <p>Unleash Your Potential</p>
     </div>
-    <a href="#contact" class="floating-btn">Join Now</a>
-  </header>
+    <a href="#membership" class="floating-btn">Join Now</a>
+</header>
 
-  <!-- Content Sections -->
-  <section id="about" data-aos="fade-up">
-    <h2>About</h2>
-    <p>Welcome to MMC Fitness – a premium fitness studio focused on transformation and performance. Elite gear, expert coaches, and a community that thrives.</p>
-  </section>
+<!-- Content Sections -->
+<section id="about" class="!p-6">
+    <h2 class="text-4xl">Welcome to Rep Rack Fitness Haverhill</h2>
+    <p>We are a premium fitness studio focused on helping you with transformation and performance. Elite gear, expert
+        coaches, and a community that thrives.</p>
+</section>
 
-  <section id="services" data-aos="fade-up">
-    <h2>Our Offerings</h2>
+<section id="services" data-aos="fade-up">
+    <h2 class="text-4xl">Our Offerings</h2>
     <ul>
-      <li>🔸 State-of-the-art gym equipment</li>
-      <li>🔸 Personal & Small Group Training</li>
-      <li>🔸 HIIT, Spin, and Yoga Classes</li>
-      <li>🔸 Nutrition & Body Composition Coaching</li>
+        <li>🔸 State-of-the-art gym equipment</li>
+        <li>🔸 Personal & Small Group Training</li>
+        <li>🔸 HIIT, Spin, and Yoga Classes</li>
+        <li>🔸 Nutrition & Body Composition Coaching</li>
     </ul>
-  </section>
+</section>
 
-  <section id="hours" data-aos="fade-up">
-    <h2>Hours</h2>
+<section id="hours" data-aos="fade-up">
+    <h2 class="text-4xl">Opening Hours</h2>
     <p>Mon–Fri: 6 AM – 10 PM<br/>Sat–Sun: 8 AM – 8 PM</p>
-  </section>
+    <p class="!mt-3">Closed on bank holidays.</p>
+</section>
 
-  <section id="contact" data-aos="zoom-in">
-    <h2>Contact</h2>
+<section id="membership" data-aos="fade-up">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+            <h2 class="text-4xl font-semibold text-gray-900">Membership</h2>
+            <ul role="list" class="grid grid-cols-1 gap-x-2 gap-y-8 lg:grid-cols-4 xl:gap-x-2">
+                <li class="overflow-hidden rounded-xl border border-gray-200 bg-white !p-4 !gap-y-8 w-full">
+                    <!--                    <p class="text-2xl text-left font-medium text-gray-900 ">Sliver</p>-->
+                    <div class="w-full flex justify-center">
+                        <stripe-buy-button
+                                buy-button-id="buy_btn_1RpARDP5bVk4IMgTXzsjXKmm"
+                                publishable-key="pk_test_51Ro47AP5bVk4IMgTCSPFUhIjcGXaBQaiXkUupU6s7dki1OE5GKFhf2R1Qm8lDLID9vgZDTlQGEs0jieVHd60zhu500uIePuQSC"
+                        >
+                        </stripe-buy-button>
+                    </div>
+                    <!--                    <div class="flex gap-x-1">-->
+                    <!--                        <p class="text-xl text-left font-bold text-black">£40</p>-->
+                    <!--                        <p class="text-medium text-gray-600">per month</p>-->
+                    <!--                    </div>-->
+                    <!--                    <button class="!p-3 !mt-2 text-base" type="submit">Select Membership</button>-->
+                    <dl class="!my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6">
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                Access to gym equipment
+                            </dd>
+                        </div>
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                Access to lockers and showers
+                            </dd>
+                        </div>
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                10 sessions per month
+                            </dd>
+                        </div>
+                    </dl>
+                </li>
+                <li class="overflow-hidden rounded-xl border border-gray-200 !p-4 !gap-y-8 bg-white">
+                    <div class="w-full flex justify-center">
+                        <stripe-buy-button
+                                buy-button-id="buy_btn_1RpAAZP5bVk4IMgTQVVrqNce"
+                                publishable-key="pk_test_51Ro47AP5bVk4IMgTCSPFUhIjcGXaBQaiXkUupU6s7dki1OE5GKFhf2R1Qm8lDLID9vgZDTlQGEs0jieVHd60zhu500uIePuQSC"
+                        >
+                        </stripe-buy-button>
+                    </div>
+                    <dl class="!my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6">
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="#f04e30" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                Access to gym equipment
+                            </dd>
+                        </div>
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="#f04e30" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                Access to lockers and showers
+                            </dd>
+                        </div>
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="#f04e30" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                24 hour access
+                            </dd>
+                        </div>
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="#f04e30" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                24 lessons per month
+                            </dd>
+                        </div>
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="#f04e30" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                Group classes included
+                            </dd>
+                        </div>
+                    </dl>
+                </li>
+                <li class="overflow-hidden rounded-xl border border-gray-200 !p-4 !gap-y-8 bg-white">
+                    <div class="w-full flex justify-center">
+                        <stripe-buy-button
+                                buy-button-id="buy_btn_1RpAUuP5bVk4IMgTwvNKBpDv"
+                                publishable-key="pk_test_51Ro47AP5bVk4IMgTCSPFUhIjcGXaBQaiXkUupU6s7dki1OE5GKFhf2R1Qm8lDLID9vgZDTlQGEs0jieVHd60zhu500uIePuQSC"
+                        >
+                        </stripe-buy-button>
+                    </div>
+                    <dl class="!my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6">
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                Access to gym equipment
+                            </dd>
+                        </div>
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                Access to lockers and showers
+                            </dd>
+                        </div>
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                15 sessions per month
+                            </dd>
+                        </div>
+                    </dl>
+                </li>
+                <li class="overflow-hidden rounded-xl border-4 !p-4 !gap-y-8 bg-white shadow-orange rounded-lg border-double"
+                    style="border-color: #f04e30;">
+                    <div class="w-full flex justify-center">
+                        <stripe-buy-button
+                                buy-button-id="buy_btn_1RpAXhP5bVk4IMgT3hG3kHU6"
+                                publishable-key="pk_test_51Ro47AP5bVk4IMgTCSPFUhIjcGXaBQaiXkUupU6s7dki1OE5GKFhf2R1Qm8lDLID9vgZDTlQGEs0jieVHd60zhu500uIePuQSC"
+                        >
+                        </stripe-buy-button>
+                    </div>
+                    <dl class="!my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6">
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                Access to gym equipment
+                            </dd>
+                        </div>
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                Access to lockers and showers
+                            </dd>
+                        </div>
+                        <div class="flex gap-x-2 py-3">
+                            <dt class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" d="M5 10l4 4 6-8"/>
+                                </svg>
+                            </dt>
+                            <dd class="text-gray-700">
+                                15 sessions per month
+                            </dd>
+                        </div>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="contact" data-aos="zoom-in">
+    <h2 class="text-4xl">Contact</h2>
     <form action="https://formspree.io/f/mgvyvayz" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Email Address" required />
-      <textarea name="message" placeholder="Message" rows="5" required></textarea>
-      <button type="submit">Send</button>
+        <input type="text" name="name" placeholder="Your Name" class="bg-white" required/>
+        <input type="email" name="_replyto" placeholder="Email Address" class="bg-white" required/>
+        <textarea name="message" placeholder="Message" rows="5" class="bg-white" required></textarea>
+        <button type="submit">Send</button>
     </form>
     <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.8984810627165!2d0.43938941566380154!3d52.08107087973257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d857f62374a401%3A0x5d4370be6c39403f!2s40%20High%20St%2C%20Haverhill%20CB9%208AR!5e0!3m2!1sen!2suk!4v1682790933726!5m2!1sen!2suk"
-        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.8984810627165!2d0.43938941566380154!3d52.08107087973257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d857f62374a401%3A0x5d4370be6c39403f!2s40%20High%20St%2C%20Haverhill%20CB9%208AR!5e0!3m2!1sen!2suk!4v1682790933726!5m2!1sen!2suk"
+                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
     </div>
-  </section>
+</section>
 
-  <footer>
+<footer>
     <p>&copy; 2025 MMC Fitness. All rights reserved.</p>
-  </footer>
+</footer>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 1000 });
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({once: true, duration: 1000});
 
     document.getElementById("menu-toggle").addEventListener("click", () => {
-      document.getElementById("nav-links").classList.toggle("active");
+        document.getElementById("nav-links").classList.toggle("active");
     });
-  </script>
+</script>
 </body>
 </html>

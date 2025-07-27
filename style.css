@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  background: #000;
-  color: #fff;
+  /*background: #ffffff;*/
+  color: #000000;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
 }
@@ -24,11 +24,10 @@ body {
   left: 0;
   width: 100%;
   height: 60px;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
   z-index: 999;
 }
 
@@ -45,9 +44,8 @@ body {
 }
 
 .navbar .nav-links li a {
-  color: white;
+  /*color: black;*/
   text-decoration: none;
-  font-weight: bold;
   transition: color 0.3s;
 }
 
@@ -58,7 +56,7 @@ body {
 .menu-toggle {
   display: none;
   font-size: 2rem;
-  color: white;
+  color: #000000;
   cursor: pointer;
 }
 
@@ -68,7 +66,7 @@ body {
     position: absolute;
     top: 60px;
     right: 0;
-    background: #000;
+    /*background: #000;*/
     flex-direction: column;
     width: 200px;
     display: none;
@@ -86,7 +84,7 @@ body {
 /* Hero */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,13 +113,13 @@ body {
 
 .overlay p {
   font-size: 1.5rem;
-  color: #ccc;
+  color: #d8d8d8;
 }
 
 /* Sections */
 section {
-  padding: 5rem 1rem;
-  max-width: 900px;
+  padding: 3rem 1rem;
+  max-width: 1200px;
   margin: auto;
   text-align: center;
 }
@@ -189,6 +187,10 @@ button:hover, .floating-btn:hover {
   margin-top: 2rem;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 0 15px rgba(240, 78, 48, 0.4);
+}
+
+.shadow-orange {
   box-shadow: 0 0 15px rgba(240, 78, 48, 0.4);
 }
 
