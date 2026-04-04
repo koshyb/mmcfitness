@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Rep Rack Fitness | Premium Training</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&amp;family=Manrope:wght@400;500;600&amp;display=swap"
+          rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+          rel="stylesheet"/>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Rep Rack Fitness | Premium Gym & Personal Training in Haverhill">
+    <meta property="og:description"
+          content="Elite gym, yoga, expert coaches, group classes, and personalized training. Unleash your potential at Rep Rack Fitness, Haverhill.">
+    <meta property="og:url" content="https://reprackfitness.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rep Rack Fitness | Premium Gym & Personal Training in Haverhill">
+    <meta name="twitter:description"
+          content="Elite gym, yoga, expert coaches, group classes, and personalized training. Unleash your potential at Rep Rack Fitness, Haverhill.">
+
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#131313",
+                        "secondary-container": "#af8d11",
+                        "on-primary-fixed": "#00201a",
+                        "surface-variant": "#353534",
+                        "outline-variant": "#414846",
+                        "inverse-primary": "#43655c",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#262626",
+                        "on-error": "#690005",
+                        "on-tertiary": "#253600",
+                        "on-primary-fixed-variant": "#2b4d44",
+                        "secondary": "#e9c349",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#aacec3",
+                        "tertiary-fixed": "#bcf540",
+                        "secondary-fixed": "#ffe088",
+                        "surface-container-highest": "#353534",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-container": "#83a69c",
+                        "surface": "#131313",
+                        "on-secondary-container": "#342800",
+                        "tertiary-container": "#293c00",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-secondary": "#3c2f00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed": "#c5eadf",
+                        "primary-container": "#1a3c34",
+                        "on-tertiary-fixed-variant": "#374e00",
+                        "on-tertiary-fixed": "#141f00",
+                        "error": "#ffb4ab",
+                        "primary": "#aacec3",
+                        "error-container": "#93000a",
+                        "on-primary": "#14362e",
+                        "tertiary-fixed-dim": "#a1d820",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary": "#a1d820",
+                        "outline": "#8b928f",
+                        "on-surface": "#e5e2e1",
+                        "on-surface-variant": "#c1c8c4",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-tertiary-container": "#7fae00",
+                        "surface-tint": "#aacec3"
+                    },
+                    fontFamily: {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .headline-font {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-2xl shadow-black/40 flex justify-between items-center px-2 md:px-8 py-4 max-w-full mx-auto">
+    <div class="text-2xl font-bold tracking-tighter text-[#aacec3] uppercase headline-font">Rep Rack Fitness</div>
+    <div class="hidden md:flex gap-8 items-center">
+        <a class="text-[#e5e2e1] hover:text-[#aacec3] transition-colors font-body text-sm" href="#about">About Us</a>
+        <a class="text-[#e5e2e1] hover:text-[#aacec3] transition-colors font-body text-sm" href="#services">Services</a>
+        <a class="text-[#e5e2e1] hover:text-[#aacec3] transition-colors font-body text-sm"
+           href="#membership">Membership</a>
+        <a class="text-[#e5e2e1] hover:text-[#aacec3] transition-colors font-body text-sm" href="#classes">Class
+            Timings</a>
+        <a class="text-[#e5e2e1] hover:text-[#aacec3] transition-colors font-body text-sm" href="#contact">Contact
+            Us</a>
+    </div>
+    <a class="bg-[#a1d820] text-[#141f00] px-6 py-2 rounded-full font-bold headline-font text-sm hover:opacity-80 transition-all active:scale-95"
+       href="#membership">
+        Join Now
+    </a>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center justify-start overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img alt="High-end luxury gym interior" class="w-full h-full object-cover brightness-50"
+             data-alt="interior of Rep Rack Fitness"
+             src="media/update1/gym_interior.jpeg"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+    </div>
+    <div class="container mx-auto px-8 relative z-10">
+        <div class="max-w-4xl">
+            <span class="text-[#a1d820] headline-font font-bold tracking-widest uppercase text-sm mb-4 block">EST. HAVERHILL HIGH STREET</span>
+            <h1 class="headline-font text-5xl md:text-6xl md:text-8xl font-black text-[#aacec3] leading-tight tracking-tighter mb-8">
+                UNLEASH YOUR <br/> <span class="text-on-background">POTENTIAL.</span>
+            </h1>
+            <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-10 leading-relaxed">
+                Experience elite-level training in a fun and safe supervised training environment.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a class="bg-[#a1d820] text-[#141f00] px-10 py-4 rounded-full font-bold headline-font text-lg hover:opacity-90 transition-all shadow-xl shadow-[#a1d820]/10"
+                   href="#membership">
+                    Join The Rack
+                </a>
+                <a class="border-2 border-[#414846] text-on-surface px-10 py-4 rounded-full font-bold headline-font text-lg hover:bg-[#2a2a2a] transition-all"
+                   href="#services">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Promotional Video Section -->
+<section class="py-32 bg-surface">
+    <div class="container mx-auto px-4 md:px-8 text-center">
+        <span class="text-[#a1d820] headline-font font-bold tracking-widest uppercase text-sm block mb-4">INSIDE THE REP RACK GYM</span>
+        <h2 class="headline-font text-5xl md:text-6xl font-black text-[#aacec3] mb-6 md:mb-12">Experience the
+            Energy</h2>
+        <div class="relative max-w-6xl mx-auto aspect-video rounded-[2rem] overflow-hidden group">
+            <video alt="Cinematic Gym Video"
+                   aria-description="Video of inside the gym and members working out to achieve their goals"
+                   class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition-transform duration-700"
+                   autoplay muted loop playsinline
+            >
+                <source type="video/mp4"
+                        src="media/update1/promo_video.mp4"/>
+            </video>
+            <div class="absolute bottom-8 left-8 right-8 flex justify-between items-end text-left pointer-events-none">
+                <div>
+                    <p class="headline-font font-bold text-base md:text-xl text-on-background">Pure High-Performance</p>
+                    <p class="text-sm font-body text-on-surface-variant uppercase">See what makes Rep Rack Fitness
+                        unique</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- About Us -->
+<section class="py-24 md:py-32 bg-[#1c1b1b]" id="about">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center">
+            <div class="relative">
+                <div class="aspect-square bg-[#262626] rounded-3xl overflow-hidden shadow-2xl border border-[#414846]/10">
+                    <img alt="Training Session" class="w-full h-full object-cover"
+                         data-alt="focused individual training in a minimalist high-performance gym with natural light and premium green equipment"
+                         src="media/update1/mayor.webp"/>
+                </div>
+                <div class="absolute -bottom-10 -right-10 bg-[#a1d820] p-10 rounded-2xl hidden md:block">
+                    <p class="headline-font font-black text-4xl text-[#141f00]">2024</p>
+                    <p class="font-body text-xs text-[#141f00] font-bold uppercase tracking-widest">Inaugurated</p>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <h2 class="headline-font text-3xl md:text-5xl font-bold text-[#aacec3]">A Premium Fitness Gym On <br/>Haverhill
+                    High
+                    Street</h2>
+                <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                    Inaugurated by the Mayor of Haverhill, Quinn Cox. Rep Rack Fitness isn't just a gym; it's a
+                    statement. We believe in the delivering individualized training and structured training services.
+                </p>
+
+                <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                    Each member receives tailored training advice and a personalised programme based on their body type,
+                    fitness level, and personal goals.
+                </p>
+
+                <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                    Unlike low-cost, unsupervised gym memberships, Rep Rack Fitness operates with continuous floor
+                    supervision. Qualified trainers are available to provide guidance, correct technique, and ensure
+                    safe, effective training, supporting consistent member progression.
+                </p>
+                <div class="grid grid-cols-2 gap-8 py-8 border-y border-[#414846]/20">
+                    <div>
+                        <p class="headline-font text-2xl font-bold text-[#e9c349]">Elite Coaches</p>
+                        <p class="font-body text-sm text-on-surface-variant">Continuous supervision on the floor.</p>
+                    </div>
+                    <div>
+                        <p class="headline-font text-2xl font-bold text-[#e9c349]">Bespoke Path</p>
+                        <p class="font-body text-sm text-on-surface-variant">Individualized training methodologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Member Transformations Section -->
+<section class="py-24 md:py-32 bg-surface">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="mb-8 md:mb-16">
+            <span class="text-[#a1d820] headline-font font-bold tracking-widest uppercase text-sm block mb-2">PROVEN PROGRESS</span>
+            <h2 class="headline-font text-5xl font-bold text-on-background">Real Results</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <!-- Transformation Card 1 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] rounded-3xl overflow-hidden mb-1 md:mb-4 relative">
+                    <img alt="Transformation 1"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         data-alt="High quality before and after side-by-side fitness transformation photo"
+                         src="media/update1/transform/transform_1.jpeg"/>
+                </div>
+                <h3 class="headline-font font-bold text-lg text-[#aacec3]">Tailored Strength</h3>
+            </div>
+            <!-- Transformation Card 2 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] rounded-3xl overflow-hidden mb-1 md:mb-4 bg-[#2a2a2a] relative">
+                    <img alt="Transformation 2"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         data-alt="Female fitness transformation showing improved tone and posture"
+                         src="media/update1/transform/transform_2.jpeg"/>
+                </div>
+                <h3 class="headline-font font-bold text-lg text-[#aacec3]">Tone Journey</h3>
+            </div>
+            <!-- Transformation Card 3 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] rounded-3xl overflow-hidden mb-1 md:mb-4 bg-[#2a2a2a] relative">
+                    <img alt="Transformation 3"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         data-alt="Before and after transformation of a male athlete"
+                         src="media/update1/transform/transform_3.jpeg"/>
+                </div>
+                <h3 class="headline-font font-bold text-lg text-[#aacec3]">Elite Conditioning</h3>
+            </div>
+            <!-- Transformation Card 4 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] rounded-3xl overflow-hidden mb-1 md:mb-4 bg-[#2a2a2a] relative">
+                    <img alt="Transformation 4"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         data-alt="Before and after transformation showing weight loss and health improvement"
+                         src="media/update1/transform/transform_4.jpeg"/>
+                </div>
+                <h3 class="headline-font font-bold text-lg text-[#aacec3]">Functional Mobility</h3>
+            </div>
+            <!-- Transformation Card 5 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] rounded-3xl overflow-hidden mb-1 md:mb-4 bg-[#2a2a2a] relative">
+                    <img alt="Transformation 5"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         data-alt="Senior fitness transformation showing improved vitality"
+                         src="media/update1/transform/transform_5.jpeg"/>
+                </div>
+                <h3 class="headline-font font-bold text-lg text-[#aacec3]">Athletic Performance</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Services Bento Grid -->
+<section class="py-24 md:py-32 bg-[#1c1b1b]" id="services">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="mb-10 md:mb-20">
+            <span class="text-[#a1d820] headline-font font-bold tracking-widest uppercase text-sm block mb-2">OUR SPECIALISATIONS</span>
+            <h2 class="headline-font text-5xl font-bold text-on-background">Services</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Large Card -->
+            <div class="md:col-span-1 md:row-span-2 bg-[#131313] p-10 rounded-[2rem] flex flex-col justify-between group hover:bg-[#1a3c34] transition-colors duration-500">
+                <div>
+                    <span class="material-symbols-outlined text-4xl text-[#a1d820] mb-6" data-icon="fitness_center">fitness_center</span>
+                    <h3 class="headline-font text-3xl font-bold mb-4">Strength &amp; Conditioning</h3>
+                    <p class="font-body text-on-surface-variant text-lg">To improve overall fitness and performance</p>
+                </div>
+                <img alt="Strength"
+                     class="mt-8 rounded-2xl h-62 grayscale group-hover:grayscale-0 transition-all duration-500"
+                     data-alt="heavy steel weight plates stacked neatly in a dark gym environment with sharp industrial lighting"
+                     src="media/update1/gym_couple1.png"/>
+            </div>
+            <!-- Small Cards -->
+            <div class="bg-[#2a2a2a] p-8 rounded-[2rem] hover:scale-[1.02] transition-transform">
+                <span class="material-symbols-outlined text-3xl text-[#e9c349] mb-4" data-icon="self_improvement">self_improvement</span>
+                <h3 class="headline-font text-xl font-bold mb-2">Yoga &amp; Kalari</h3>
+                <p class="font-body text-sm text-on-surface-variant">Supports flexibility, balance, and mental
+                    wellbeing</p>
+            </div>
+            <div class="bg-[#2a2a2a] p-8 rounded-[2rem] hover:scale-[1.02] transition-transform">
+                <span class="material-symbols-outlined text-3xl text-[#e9c349] mb-4" data-icon="accessibility_new">accessibility_new</span>
+                <h3 class="headline-font text-xl font-bold mb-2">Pilates</h3>
+                <p class="font-body text-sm text-on-surface-variant">Core stability and postural refinement, suitable
+                    for older adults</p>
+            </div>
+            <div class="bg-[#2a2a2a] p-8 rounded-[2rem] hover:scale-[1.02] transition-transform">
+                <span class="material-symbols-outlined text-3xl text-[#a1d820] mb-4"
+                      data-icon="monitoring">monitoring</span>
+                <h3 class="headline-font text-xl font-bold mb-2">Supervised Floor Training</h3>
+                <p class="font-body text-sm text-on-surface-variant">For general gym members to ensure safe and
+                    effective exercise</p>
+            </div>
+            <div class="bg-[#2a2a2a] p-8 rounded-[2rem] hover:scale-[1.02] transition-transform">
+                <span class="material-symbols-outlined text-3xl text-[#a1d820] mb-4"
+                      data-icon="person_play">person_play</span>
+                <h3 class="headline-font text-xl font-bold mb-2">Personal Training</h3>
+                <p class="font-body text-sm text-on-surface-variant">Tailored to individual goals and requirements</p>
+            </div>
+            <div class="bg-[#2a2a2a] p-8 rounded-[2rem] hover:scale-[1.02] transition-transform">
+                <span class="material-symbols-outlined text-3xl text-[#ffb4ab] mb-4" data-icon="medical_services">medical_services</span>
+                <h3 class="headline-font text-xl font-bold mb-2">Injury Prevention &amp; Rehab</h3>
+                <p class="font-body text-sm text-on-surface-variant">To promote recovery and safe training</p>
+            </div>
+            <div class="bg-[#2a2a2a] p-8 rounded-[2rem] hover:scale-[1.02] transition-transform">
+                <span class="material-symbols-outlined text-3xl text-[#e9c349] mb-4"
+                      data-icon="restaurant">restaurant</span>
+                <h3 class="headline-font text-xl font-bold mb-2">Nutrition</h3>
+                <p class="font-body text-sm text-on-surface-variant">Fuel your ambition with expert guidance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Team & Community Section -->
+<section class="py-24 md:py-32 bg-[#131313]">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-8 md:mb-16">
+            <span class="text-[#a1d820] headline-font font-bold tracking-widest uppercase text-sm block mb-2">THE PEOPLE</span>
+            <h2 class="headline-font text-5xl font-bold text-on-background">The Rep Rack Family</h2>
+        </div>
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="aspect-video rounded-[3rem] overflow-hidden bg-[#2a2a2a] border border-[#a1d820]/10 shadow-2xl group relative">
+                <img alt="The Rep Rack Family"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                     data-alt="A diverse group members and professional trainers"
+                     src="media/update1/team.jpeg"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent transition-opacity flex items-end p-4 md:p-12">
+                    <p class="headline-font text-[#a1d820] font-bold tracking-widest uppercase text-xs md:text-sm">
+                        United in
+                        Excellence</p>
+                </div>
+            </div>
+            <div class="text-center max-w-3xl mx-auto">
+                <h3 class="headline-font text-3xl font-bold text-[#aacec3] mb-4">Our Unified Team &amp; Community</h3>
+                <p class="font-body text-on-surface-variant text-lg leading-relaxed">
+                    At Rep Rack, the line between expert coaching and member support is seamless. We are a collective of
+                    dedicated professionals and driven individuals, all working toward the same goal: elite-level
+                    performance and unwavering growth.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Member Testimonials -->
+<section class="py-24 md:py-32 bg-[#1c1b1b]">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="mb-8 md:mb-16">
+            <span class="text-[#a1d820] headline-font font-bold tracking-widest uppercase text-sm block mb-2">VOICES FROM THE RACK</span>
+            <h2 class="headline-font text-5xl font-bold text-on-background">Member Stories</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-2">
+            <!-- Testimonial 1 -->
+            <img alt="The Rep Rack Family"
+                 class="w-full h-full object-cover"
+                 data-alt="Testimonial of a member"
+                 src="media/update1/testimonials/testimonial_1.5.PNG"/>
+            <!-- Testimonial 2 -->
+            <img alt="The Rep Rack Family"
+                 class="w-full h-full object-cover"
+                 data-alt="Testimonial of a member"
+                 src="media/update1/testimonials/testimonial_2.1.PNG"/>
+            <!-- Testimonial 3 -->
+            <img alt="The Rep Rack Family"
+                 class="w-full h-full object-cover"
+                 data-alt="Testimonial of a member"
+                 src="media/update1/testimonials/testimonial_3.1.PNG"/>
+            <!-- Testimonial 4 -->
+            <img alt="The Rep Rack Family"
+                 class="w-full h-full object-cover"
+                 data-alt="Testimonial of a member"
+                 src="media/update1/testimonials/testimonial_4.1.PNG"/>
+            <!-- Testimonial 5 -->
+            <img alt="The Rep Rack Family"
+                 class="w-full h-full object-cover"
+                 data-alt="Testimonial of a member"
+                 src="media/update1/testimonials/testimonial_5.1.PNG"/>
+        </div>
+    </div>
+</section>
+
+
+<!-- Membership Plans -->
+<section class="py-24 md:py-32 bg-[#131313]" id="membership">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-10 md:mb-20">
+            <h2 class="headline-font text-5xl font-bold text-[#aacec3]">Membership Tiers</h2>
+            <p class="font-body text-on-surface-variant mt-4">Transparent pricing for premium performance.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- General -->
+            <div class="bg-[#262626] border border-white/5 p-10 rounded-[2.5rem] flex flex-col h-full">
+                <h3 class="headline-font text-2xl font-bold mb-2">General</h3>
+                <div class="flex items-baseline gap-1 mb-8">
+                    <span class="text-4xl font-black headline-font">£49</span>
+                    <span class="text-on-surface-variant text-sm">/month</span>
+                </div>
+                <ul class="space-y-4 mb-12 flex-grow">
+                    <li class="flex items-center gap-3 text-sm text-on-surface-variant"><span
+                            class="material-symbols-outlined text-[#a1d820]" data-icon="check">check</span>Full Gym
+                        Access
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-on-surface-variant"><span
+                            class="material-symbols-outlined text-[#a1d820]" data-icon="check">check</span>4 training
+                        sessions per month
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-on-surface-variant"><span
+                            class="material-symbols-outlined text-[#a1d820]" data-icon="check">check</span>1 massage
+                        chair access per month
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-on-background"><span
+                            class="material-symbols-outlined text-[#a1d820]" data-icon="check">check</span>Supervised
+                        floor training and support
+                    </li>
+                </ul>
+                <button class="w-full py-4 rounded-full border border-[#414846] font-bold headline-font hover:bg-[#2a2a2a] transition-all">
+                    Select Plan
+                </button>
+            </div>
+            <!-- Standard -->
+            <div class="bg-[#262626] border border-white/5 p-10 rounded-[2.5rem] flex flex-col h-full">
+                <h3 class="headline-font text-2xl font-bold mb-2 text-[#aacec3]">Standard</h3>
+                <div class="flex items-baseline gap-1 mb-8">
+                    <span class="text-4xl font-black headline-font text-on-background">£99</span>
+                    <span class="text-on-surface-variant text-sm">/month</span>
+                </div>
+                <ul class="space-y-4 mb-12 flex-grow">
+                    <li class="flex items-center gap-3 text-sm text-on-background"><span
+                            class="material-symbols-outlined text-[#a1d820]" data-icon="check">check</span>Full Gym
+                        Access
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-on-background"><span
+                            class="material-symbols-outlined text-[#a1d820]" data-icon="check">check</span>8 training
+                        sessions per month
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-on-background"><span
+                            class="material-symbols-outlined text-[#a1d820]" data-icon="check">check</span>4 massage
+                        chair access per month
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-on-background"><span
+                            class="material-symbols-outlined text-[#a1d820]" data-icon="check">check</span>Supervised
+                        floor training and support
+                    </li>
+                </ul>
+                <button class="w-full py-4 rounded-full border border-[#414846] font-bold headline-font hover:bg-[#2a2a2a] transition-all">
+                    Select Plan
+                </button>
+            </div>
+            <!-- Premium -->
+            <div class="bg-[#2a2a2a] p-10 rounded-[2.5rem] flex flex-col h-full border border-white/5">
+                <h3 class="headline-font text-2xl font-bold mb-2">Premium</h3>
+                <div class="flex items-baseline gap-1 mb-8 text-[#e9c349]">
+                    <span class="text-4xl font-black headline-font">£149</span>
+                    <span class="text-on-surface-variant text-sm">/month</span>
+                </div>
+                <ul class="space-y-4 mb-12 flex-grow text-on-surface-variant">
+                    <li class="flex items-center gap-3 text-sm text-on-background"><span
+                            class="material-symbols-outlined text-[#e9c349]" data-icon="check">check</span>Full Gym
+                        Access
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-on-background"><span
+                            class="material-symbols-outlined text-[#e9c349]" data-icon="check">check</span>Unlimited
+                        access to training sessions
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-on-background"><span
+                            class="material-symbols-outlined text-[#e9c349]" data-icon="check">check</span>Priority
+                        service
+                    </li>
+                    <li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-[#e9c349]"
+                                                                      data-icon="check">check</span>Nutritional guidance
+                        and advice
+                    </li>
+                    <li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-[#e9c349]"
+                                                                      data-icon="check">check</span>6 massage chair
+                        access per month
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-on-background"><span
+                            class="material-symbols-outlined text-[#e9c349]" data-icon="check">check</span>Supervised
+                        floor training and support
+                    </li>
+                </ul>
+                <button class="w-full py-4 rounded-full border-2 border-[#e9c349] text-[#e9c349] font-bold headline-font hover:bg-[#e9c349]/10 transition-all">
+                    Select Plan
+                </button>
+            </div>
+            <!-- 1 to 1 PT -->
+            <div class="bg-[#1a3c34] p-10 border border-[#414846]/10 rounded-[2.5rem] flex flex-col h-full shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-[#a1d820] text-[#141f00] py-1 px-6 rounded-bl-xl text-[10px] headline-font font-black tracking-widest uppercase">
+                    Popular
+                </div>
+                <h3 class="headline-font text-2xl font-bold mb-6">One to One<br/>Personal Training</h3>
+                <p class="font-body text-on-surface-variant text-sm mb-12 leading-relaxed">Dedicated focus with our
+                    senior trainers. Tailored completely to your schedule and goals.</p>
+                <div class="mt-auto">
+                    <p class="headline-font font-bold text-sm uppercase tracking-widest text-[#a1d820] mb-4">Contact us
+                        for pricing</p>
+                    <button class="w-full py-4 rounded-full bg-white text-black font-bold headline-font hover:bg-on-surface-variant transition-all">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Class Timings -->
+<section class="py-24 md:py-32 bg-[#0e0e0e]" id="classes">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div>
+                <span class="text-[#e9c349] headline-font font-bold tracking-widest uppercase text-sm block mb-2">SCHEDULE</span>
+                <h2 class="headline-font text-5xl font-bold text-on-background">Class Timetable</h2>
+            </div>
+            <div class="bg-[#2a2a2a] p-4 rounded-xl flex gap-8">
+                <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-[#a1d820]"></div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Performance</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-[#e9c349]"></div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Wellness</span>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead>
+                <tr class="border-b border-[#414846]/30">
+                    <th class="py-6 headline-font font-bold text-on-surface-variant uppercase tracking-widest text-sm">
+                        Class Name
+                    </th>
+                    <th class="py-6 headline-font font-bold text-on-surface-variant uppercase tracking-widest text-sm px-5 md:px-0">
+                        Monday
+                    </th>
+                    <th class="py-6 headline-font font-bold text-on-surface-variant uppercase tracking-widest text-sm px-5 md:px-0">
+                        Tuesday
+                    </th>
+                    <th class="py-6 headline-font font-bold text-on-surface-variant uppercase tracking-widest text-sm px-5 md:px-0">
+                        Wednesday
+                    </th>
+                    <th class="py-6 headline-font font-bold text-on-surface-variant uppercase tracking-widest text-sm px-5 md:px-0">
+                        Thursday
+                    </th>
+                    <th class="py-6 headline-font font-bold text-on-surface-variant uppercase tracking-widest text-sm px-5 md:px-0">
+                        Friday
+                    </th>
+                    <th class="py-6 headline-font font-bold text-on-surface-variant uppercase tracking-widest text-sm px-5 md:px-0">
+                        Saturday
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="font-body">
+                <tr class="border-b border-[#414846]/10">
+                    <td class="py-6 px-1 text-sm">
+                        <p class="text-xl font-bold text-[#a1d820] headline-font">Strength &amp; <br/> Conditioning</p>
+                        <p class="text-xs text-on-surface-variant uppercase tracking-widest">High Intensity</p>
+                    </td>
+                    <td class="py-6 px-5 text-xs md:text-sm md:px-0">Morning<br/>09:30 am to 10:30
+                        am<br/><br/>Evening<br/>08:00 pm to
+                        09:00 pm
+                    </td>
+                    <td class="py-6 px-5 text-xs md:text-sm md:px-0">Morning<br/>09:30 am to 10:30
+                        am<br/><br/>Evening<br/>08:00 pm to
+                        09:00 pm
+                    </td>
+                    <td class="py-6 px-5 text-xs md:text-sm md:px-0">Morning<br/>09:30 am to 10:30
+                        am<br/><br/>Evening<br/>08:00 pm to
+                        09:00 pm
+                    </td>
+                    <td class="py-6 px-5 text-xs md:text-sm md:px-0">Morning<br/>09:30 am to 10:30
+                        am<br/><br/>Evening<br/>08:00 pm to
+                        09:00 pm
+                    </td>
+                    <td class="py-6 px-5 text-xs md:text-sm md:px-0">Morning<br/>09:30 am to 10:30 am</td>
+                    <td class="py-6 px-5 text-xs md:text-sm md:px-0">Morning<br/>11:00 am to 12:00 pm</td>
+                </tr>
+                <tr class="border-b border-[#414846]/10">
+                    <td class="py-6">
+                        <p class="text-xl font-bold text-[#e9c349] headline-font">Yoga and Kalari</p>
+                        <p class="text-xs text-on-surface-variant uppercase tracking-widest">Mind &amp; Body</p>
+                    </td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">10:30 am to 11:15 am</td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">10:30 am to 11:15 am</td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">10:30 am to 11:15 am</td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">10:30 am to 11:15 am</td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">10:30 am to 11:15 am</td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">11:00 am to 12:00 pm</td>
+                </tr>
+                <tr>
+                    <td class="py-6">
+                        <p class="text-xl font-bold text-[#e9c349] headline-font">Yoga and Pilates</p>
+                        <p class="text-xs text-on-surface-variant uppercase tracking-widest">Older Adults (60+)</p>
+                    </td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">06:30 pm to 07:30 pm</td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">—</td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">06:30 pm to 07:30 pm</td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">06:30 pm to 07:30 pm</td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">—</td>
+                    <td class="py-6 px-5 md:px-0 text-xs md:text-sm">—</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<!-- Special Offers -->
+<section class="py-24 md:py-32 bg-[#1c1b1b]">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="mb-8 md:mb-16">
+            <span class="text-[#a1d820] headline-font font-bold tracking-widest uppercase text-sm block mb-4">RECOMMENDED</span>
+            <h2 class="headline-font text-5xl font-bold text-[#aacec3]">Offers</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <!-- Offers -->
+            <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-[#293c00] p-10 rounded-[2.5rem] flex flex-col justify-between group">
+                    <div>
+                        <span class="material-symbols-outlined text-4xl text-[#a1d820] mb-4" data-icon="rocket_launch">rocket_launch</span>
+                        <h4 class="headline-font text-2xl font-bold mb-2">6-Month Upfront</h4>
+                        <p class="font-body text-sm text-on-surface-variant">Pay in full and receive a significant
+                            discount on your annual journey.</p>
+                    </div>
+                    <div class="mt-4 space-y-1 text-lg">
+                        <p class="text-[#a1d820] font-black">Save 25% off Premium Membership</p>
+                        <p class="text-[#a1d820] font-black">Save 15% off Standard Membership</p>
+                        <p class="text-[#a1d820] font-black">Save 10% off General Membership</p>
+                    </div>
+                </div>
+                <div class="bg-[#2a2a2a] p-10 rounded-[2.5rem] flex flex-col justify-between">
+                    <div>
+                        <span class="material-symbols-outlined text-4xl text-[#e9c349] mb-4"
+                              data-icon="groups">groups</span>
+                        <h4 class="headline-font text-2xl font-bold mb-2">Partner Offer</h4>
+                        <p class="font-body text-sm text-on-surface-variant">Join with a partner and both enjoy premium
+                            benefits at a reduced rate.</p>
+                    </div>
+                    <div class="mt-4 space-y-1 text-lg">
+                        <p class="text-[#e9c349] font-black">Save 25% off Premium Membership</p>
+                        <p class="text-[#e9c349] font-black">Save 15% off Standard Membership</p>
+                    </div>
+                </div>
+                <div class="bg-[#293c00] p-10 rounded-[2.5rem] flex flex-col justify-between group">
+                    <div>
+                        <span class="material-symbols-outlined text-4xl text-[#a1d820] mb-4"
+                              data-icon="loyalty">loyalty</span>
+                        <h4 class="headline-font text-2xl font-bold mb-2">Loyalty Offer</h4>
+                        <p class="font-body text-sm text-on-surface-variant">After completing 6 months</p>
+                    </div>
+                    <div class="mt-4 space-y-1 text-lg">
+                        <p class="mt-2 text-[#a1d820] font-black">Save 25% off Premium Membership</p>
+                        <p class="mt-1 text-[#a1d820] font-black">Save 15% off Standard Membership</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-24 md:py-32">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="mb-8 md:mb-16">
+            <span class="text-[#a1d820] headline-font font-bold tracking-widest uppercase text-sm block mb-4">AVAILABILITY</span>
+            <h2 class="headline-font text-5xl font-bold text-[#aacec3]">Opening Hours</h2>
+        </div>
+        <!-- Opening Hours -->
+        <div class="bg-[#2a2a2a] grid grid-cols-1 md:grid-cols-2 gap-8 p-10 md:p-14 rounded-[2.5rem] text-base md:text-xl">
+            <div class="flex flex-col">
+                <span class="font-bold headline-font uppercase tracking-widest">Monday - Friday</span>
+                <span class="font-body">06:00 am - 10:00 pm</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold headline-font uppercase tracking-widest">Saturday &amp; Sunday</span>
+                <span class="font-body">08:00 am - 08:00 pm</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-24 md:py-32 bg-[#1c1b1b]" id="contact">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="space-y-10">
+                <div>
+                    <span class="text-[#a1d820] headline-font font-bold tracking-widest uppercase text-sm block mb-4">GET IN TOUCH</span>
+                    <h2 class="headline-font text-5xl md:text-6xl font-black text-on-background leading-tight">Start
+                        Your <br/><span class="text-[#aacec3]">Transformation.</span></h2>
+                </div>
+                <p class="font-body text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                    Ready to elevate your training? Fill out the form to book a tour of our Haverhill High Street
+                    gym or discuss your performance goals with an elite coach.
+                </p>
+                <div class="space-y-6 pt-4">
+                    <div class="flex items-center gap-6 group">
+                        <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center text-[#a1d820]">
+                            <span class="material-symbols-outlined text-xl" data-icon="mail">mail</span>
+                        </div>
+                        <p class="headline-font text-lg font-bold text-[#aacec3]">train@mmcfitness.com</p>
+                    </div>
+                    <div class="flex items-center gap-6 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#2a2a2a] flex items-center justify-center text-secondary">
+                            <span class="material-symbols-outlined text-xl" data-icon="location_on">location_on</span>
+                        </div>
+                        <p class="headline-font text-lg font-bold text-on-background">40 High Street, Haverhill, CB9
+                            8AA</p>
+                    </div>
+                </div>
+                <div class="pt-2 flex gap-6">
+                    <a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-[#a1d820] hover:bg-[#a1d820] hover:text-[#141f00] hover:border-[#a1d820] transition-all duration-300"
+                       href="https://www.instagram.com/rep_rack_fitness/" target="_blank">
+                        <svg class="w-fit p-1 fill-current" viewBox="0 0 32 32">
+                        <g>
+                        <path d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"/>
+                            <path d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8   c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"/>
+                            <path d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8   c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"/>
+                        </g>
+                        </svg>
+                    </a>
+
+                    <a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-[#a1d820] hover:bg-[#a1d820] hover:text-[#141f00] hover:border-[#a1d820] transition-all duration-300"
+                       href="https://www.facebook.com/profile.php?id=61581403207406" target="_blank">
+                        <svg class="w-fit p-2 fill-current text-[#a1d820]" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"/>
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+            <div class="bg-[#262626] p-8 md:p-12 rounded-[2.5rem] border border-[#414846]/10 shadow-2xl">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block headline-font text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                               for="full-name">Full Name</label>
+                        <input class="w-full bg-[#2a2a2a] border-none rounded-xl px-6 py-4 text-on-background focus:ring-2 focus:ring-[#a1d820] transition-all"
+                               id="full-name" placeholder="Full Name" type="text"/>
+                    </div>
+                    <div>
+                        <label class="block headline-font text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                               for="email-address">Email Address</label>
+                        <input class="w-full bg-[#2a2a2a] border-none rounded-xl px-6 py-4 text-on-background focus:ring-2 focus:ring-[#a1d820] transition-all"
+                               id="email-address" placeholder="john@example.com" type="email"/>
+                    </div>
+                    <div>
+                        <label class="block headline-font text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                               for="message">Message</label>
+                        <textarea
+                                class="w-full bg-[#2a2a2a] border-none rounded-xl px-6 py-4 text-on-background focus:ring-2 focus:ring-[#a1d820] transition-all resize-none"
+                                id="message" placeholder="Tell us about your fitness goals..." rows="4"></textarea>
+                    </div>
+                    <button class="w-full bg-[#a1d820] text-[#141f00] py-5 rounded-xl font-bold headline-font text-lg hover:opacity-90 transition-all active:scale-[0.98] shadow-xl shadow-[#a1d820]/10"
+                            type="submit">Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
